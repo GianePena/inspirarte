@@ -127,7 +127,7 @@ main {
 /*imagen galeria*/
 
 .historia{
-    background-image:url(../muro-hormigon-gris.jpg);
+    background-image:url(../imagenes/index/muro-hormigon-gris.jpg);
     background-size: cover;
     height: 350px;
     display: flex;
