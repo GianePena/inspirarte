@@ -1,52 +1,53 @@
 /*HEADER*/
 
 body{
-    background-color: #dfdfdf;
+    background-color:white ;
+}
+nav{
+    z-index: 100;
 }
 #header article{
     background-image: url(../imagenes/cuadro.jpg);
     background-repeat: no-repeat;
     height: 150px;
     background-size: cover;
-    position: relative;
-    display: flex;
-
 }
 @media(max-width:480px){
     .logo_inspirArte{
         width: 220px;
-        height: 180px;
-        align-items: flex-start;}
+        height: 180px;}
 }
 
 /*FOOTER*/
 #footer{
     height: 300px;
     width: 100%;
-    background-color: #9e9e9e;
+    background-color: #bbbaba;
     opacity: 0.8;
+    padding: 50px;
 }
 .logo_pie{
-    width: 150px;
-    height: 150px;
-    opacity: 0.3;
+    width: 80px;
+    height: 100px;
     padding-left: 100px;
+
 
 }
 .titulo{
     text-decoration: underline;
 }
 #footer p{
-    font-size: 1em;
+    font-size: 1.1em;
     font-family: garamond;
-    text-transform: uppercase;
-    color:#616161;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: whitesmoke;
 }
 
 .mendoza a,
 .cordoba a{
     text-decoration: none;
-    color:#616161;
+    color: whitesmoke;
     font-size: 1em;
     font-family: garamond;
 }
@@ -94,7 +95,7 @@ body{
         align-items: center;
         gap:25px;
         width: 100%;
-        height:600px;
+        height:650px;
     }
     .mendoza,
     .cordoba{
@@ -103,7 +104,6 @@ body{
     .logo_pie{
         width: 200px;
         height: 150px;
-        padding-top: 20px;
         padding-left: 0px;
         align-content: center;
     }
@@ -123,31 +123,53 @@ main {
     display: flex;
     flex-direction: column;
 }
+
 /*imagen galeria*/
+
 .historia{
+    background-image:url(../muro-hormigon-gris.jpg);
+    background-size: cover;
+    height: 350px;
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 75px;
+}
+.cuadro{
+    width: 200px;
+    height: 100px;
+    background-color:#9a53fe;
+    border-radius: 10px;
+    margin: 25px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #f5f5f5; 
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+
+
 }
 
-.historia img {
-    width: 100%;
-    height: 500px;
-    justify-content: center;
-}
 /*Texto historia*/
 
 .historia_texto {
     background-color:#f5f5f5;
-    width: 100%;
+    width: 90%;
     height: 120px;
     padding: 10px;
-    margin-top: 50px;
     margin-bottom:  50px;
     font-size:1.35em;
     text-align: center;
     font-family:times new roman ;
     color:#757575;
     font-style: italic;
+    word-spacing: 2px;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .historia_texto span{
     font-weight: bold;
@@ -168,6 +190,7 @@ main {
     align-items: center;
     gap:20px;
 }
+
 .datos_alumnos img,
 .datos_calendario img,
 .datos_materias img,
@@ -176,13 +199,14 @@ main {
     height:200px;
     opacity: 50%;
 }
-
 #datos p {
     font-size:25px;
     font-family:calibri ;    
     text-decoration: none;
     color: gray;
 }
+
+
 /*-----------------------------usuario-------------------------------------*/
 
 /*Titulo*/
@@ -192,15 +216,17 @@ main {
     background-size: cover;
     opacity: 0.6;
     width: 100%;
-    height: 250px;
+    height: 400px;
     margin-bottom: 50px;
 }
 .titulo_usuario h1 {
-    font-family: 'Tinos', serif;
-    color:#ebe9e9;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#080808;
     font-size: 10em;
-    text-decoration: double;
+    letter-spacing:1px;
     text-align: center;
+    text-decoration-style: cursive;
+    padding-top: 100px;
 }
 
 /*Foto usuario*/
@@ -225,9 +251,8 @@ main {
     background-color:  #f5f5f5;
     margin: 0 auto;
     padding: 25px 25px 25px 25px;
-    box-shadow:inset 0 -3em 3em rgba(78, 78, 78, 0.2),
-            0 0  0 2px rgb(245,245,245),
-            0.3em 0.3em 1em rgba(69, 69, 69, 0.4);
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+    border-radius: 5px;
 }
 /*foto estudiante*/
 .caja_foto{
@@ -258,16 +283,20 @@ div {
 }
 .boton_enviar_usuario{
     font-size: 1em;
-    background-color:#b8b7b7 ;
+    color: #f5f5f5;
+    background-color:#b8b7b7;
+    border: 1px solid whitesmoke;
     text-align: center;
     width: 122px;
-    height: 25px;
+    height: 35px;
 }
+
 
 /*foto qr*/
 .qr{
     width: 300px ;
     height: 320px ;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .qr img { 
     width:180px ;
@@ -292,14 +321,17 @@ div {
     width:1000px ;
     height: 220px;
     background-color:#f5f5f5;
-    border-radius: 2%;
+    border-radius:10px;
+    box-shadow:inset 0 -3em 3em rgba(110, 110, 110, 0.2),
+            0 0  0 2px rgb(245,245,245),
+            0.3em 0.3em 1em rgba(110, 110, 110, 0.2);
     margin-top: 100px;
+    padding-top: 30px;
 }
 .registrarse h3{
     font-size: 1.5625em;
     color:#536dfe;
     font-family:'Courier New', Courier, monospace;
-    border-radius: 2%;
 
 }
 
@@ -314,10 +346,13 @@ div {
 
 @media(max-width:480px){
     .titulo_usuario{
-        font-size: 0.75em;
-        height: 150px;
+        font-size: 0.52em;
+        width: 400px;
+        height: 200px;
         background-size: cover;
-        margin-top: 120px;
+        margin-top: 75px;
+        margin-bottom: 50px;
+        padding-top:-50px;
     }
     .usuario{
         display: flex;
@@ -370,15 +405,13 @@ div {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 250px;
-    font-family: 'Tinos', serif;
-    font-size:6.875em;
-    color:#ebe9e9;
+    height: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#080808;
     font-size: 10em;
+    letter-spacing:1px;
     text-align: center;
-    text-decoration: solid;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 100px;
     text-transform: uppercase;
     opacity: 0.6;
 }
@@ -389,7 +422,7 @@ div {
     grid-template-rows: 250px 250px;
     margin-top:180px;
     text-align: center;
-    gap:5px;
+    gap:15px;
     grid-template-areas: 
     "img1 img2 img3 img4"
     "img1 img2 img5 img5";
@@ -417,6 +450,7 @@ div {
     background-image: url(../Imagenes/actividades/pintura.jpg);
     background-size: cover;
     border-radius: 5%; 
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 
 .img1:hover {
@@ -427,6 +461,7 @@ div {
     background-image:url(../Imagenes/actividades/ceramica.jpg);
     background-size: cover;
     border-radius: 5%;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 .img2:hover {
     transform: scale(1.3); 
@@ -435,6 +470,7 @@ div {
     background-image: url(../Imagenes/actividades/artesania.jpg);
     background-size: cover;
     border-radius: 5%;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 .img3:hover {
     transform: scale(1.3); 
@@ -443,6 +479,7 @@ div {
     background-image: url(../Imagenes/actividades/escultura.jpg);
     background-size: cover;
     border-radius: 5%;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 .img4:hover {
     transform: scale(1.3); 
@@ -451,6 +488,7 @@ div {
     background-image: url(../Imagenes/actividades/dibujo.jpg);
     background-size: cover;
     border-radius: 5%;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 .img5:hover {
     transform: scale(1.3); 
@@ -466,16 +504,27 @@ div {
     .titulo_carrera{
         width: 100%;
         height: 150px;
-        margin: 0%;
-        font-size: 60px;
-        margin-top: 100px;
-        margin-bottom: 25px;
+        font-size: 50px;
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+    .titulo_carrera{
         text-align: center;
+        padding:50px;
     }
     #carreras{
         display: flex;
         flex-direction: column;
         margin: auto;
+        gap:20px;
+    }
+    .img1, 
+    .img2,
+    .img3,
+    .img4,
+    .img5{
+        width: 350px;
+        height: 150px;
     }
 }
 
@@ -503,10 +552,9 @@ div {
 .informacion{
     display: flex;
     flex-direction: column;
-}
-.informacion h2{
     color:#757575 ;
 }
+
 
 .preinscripcion {
     width: 95%;
@@ -515,7 +563,8 @@ div {
     background-color: #f5f5f5;
     border-left-style:solid;
     border-width: 15px;
-    border-left-color: #536dfe;
+    border-left-color: #9a53fe;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 
 }
 .turnos{
@@ -523,10 +572,10 @@ div {
     height: 200px;
     padding: 25px;
     background-color: #f5f5f5 ;
-
     border-left-style:solid;
     border-width: 15px;
-    border-left-color: #536dfe;
+    border-left-color: #9a53fe;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .horarios{
     width: 95%;
@@ -535,7 +584,8 @@ div {
     background-color:#f5f5f5 ;
     border-left-style:solid;
     border-width: 15px;
-    border-left-color: #536dfe;
+    border-left-color: #9a53fe;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .egresado{
     width: 95%;
@@ -544,28 +594,29 @@ div {
     background-color:#f5f5f5 ;
     border-left-style:solid;
     border-width: 15px;
-    border-left-color: #536dfe;
+    border-left-color: #9a53fe;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 /*+inf*/
 @media(max-width:480px){
     .titulo_inf{
-        margin-top: 100px;
+        margin-top: 75px;
+        margin-bottom: 50px;
     }
     .informacion{
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap:20px;
-        width: 90%;
+        width: 100%;
     }
     .preinscripcion{
-        height: 600px;
-    }
-    .egresado{
         height: 500px;
     }
+    .egresado{
+        height: 400px;
+    }
 }
-
 /*------------------------------medios de pago-----------------------------*/
 /*Titulo*/
 .pagos{
@@ -575,12 +626,13 @@ div {
 .titulos_mediosdepago {
     background-image: url(../Imagenes/medios\ de\ pago/titulomedios.jpeg);
     width: 100%;
-    height: 250px;
+    height: 400px;
     background-size: cover;
-    opacity: 0.5;
-    font-family: 'Tinos', serif;
-    font-size: 8.5em;
-    color:#c4c3c3;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#080808;
+    font-size: 10em;
+    letter-spacing:1px;
+    opacity: 0.6;
     z-index: 100;
     text-align: center;
     text-decoration: double;
@@ -593,7 +645,8 @@ div {
     padding: 25px 25px 25px 25px;
     background-color:#f5f5f5 ;
     border-radius: 2%;
-    box-shadow: 6px 6px rgb(187, 187, 188), 13px 13px rgb(169, 169, 169), 17px 17px rgb(152, 152, 152);
+    /*box-shadow: 6px 6px rgb(187, 187, 188), 13px 13px rgb(169, 169, 169), 17px 17px rgb(152, 152, 152);*/
+    box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210,210 ,210 ), 17px 17px rgb(190, 190,190 );
 }
 
 .pagos_inf{
@@ -611,11 +664,8 @@ div {
 .pagofacil,
 .rapipago,
 .banco  {
-    border-radius: 10%;
-    opacity:0.9;
     padding-left: 80px;
     padding-right: 80px;
-    z-index: 100;
 }
 
 /*contenedor pagos*/
@@ -639,11 +689,12 @@ div {
     width: 550px;
     height: 200px;
     background-color: #f5f5f5;
-    border-top: 15px solid #536dfe;
+    border-top: 15px solid #9a53fe;
     font-family: 'Tinos', serif;
     font-size: 1.5625em;
     text-align: center;
     padding-top: 25px;
+    box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
 }
 .subir_comprobante{
     font-size: 15px;
@@ -654,10 +705,11 @@ div {
     height: 200px;
     background-color: #f5f5f5;
     font-family: 'Tinos', serif;
-    border-top: 15px solid #536dfe;
     font-size: 1.5625em;
     text-align: center;
     padding-top: 25px;
+    border-top: 15px solid #9a53fe;
+    box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
 }
 .descarga_chequera a {
     color: black;
@@ -671,10 +723,11 @@ div {
     width: 100%;
     height: 350px;
     background-color: #f5f5f5;
-    border-top: 15px solid #536dfe;
+    border-top: 15px solid #9a53fe;
     padding-top: 35px;
     align-items: center;
     margin-top: 100px;
+    box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
 }
 .consulta h4 {
     text-align: center;
@@ -692,7 +745,7 @@ div {
     color: #f5f5f5;
     text-decoration:double;
     background-color:#b8b7b7 ;
-    border: 1px;
+    border: 1px solid whitesmoke;
     text-align: center;
     width: 150px;
     height: 50px;
