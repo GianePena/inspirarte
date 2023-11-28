@@ -624,7 +624,7 @@ div {
     flex-direction: column;
 }
 .titulos_mediosdepago {
-    background-image: url(../Imagenes/medios\ de\ pago/titulomedios.jpeg);
+    background-image: url(../Imagenes/mediosdepago/titulomedios.jpeg);
     width: 100%;
     height: 400px;
     background-size: cover;
