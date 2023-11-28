@@ -212,7 +212,7 @@ main {
 /*Titulo*/
 
 .titulo_usuario{
-    background-image: url(../Imagenes/usuario/usuario.jpg);
+    background-image: url(../imagenes/usuario/usuario.jpg);
     background-size: cover;
     opacity: 0.6;
     width: 100%;
@@ -447,7 +447,7 @@ div {
     grid-area: img5;
 }
 .img1 {
-    background-image: url(../Imagenes/actividades/pintura.jpg);
+    background-image: url(../imagenes/actividades/pintura.jpg);
     background-size: cover;
     border-radius: 5%; 
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -458,7 +458,7 @@ div {
 }
 
 .img2{
-    background-image:url(../Imagenes/actividades/ceramica.jpg);
+    background-image:url(../imagenes/actividades/ceramica.jpg);
     background-size: cover;
     border-radius: 5%;
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -467,7 +467,7 @@ div {
     transform: scale(1.3); 
 }
 .img3{
-    background-image: url(../Imagenes/actividades/artesania.jpg);
+    background-image: url(../imagenes/actividades/artesania.jpg);
     background-size: cover;
     border-radius: 5%;
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -476,7 +476,7 @@ div {
     transform: scale(1.3); 
 }
 .img4{
-    background-image: url(../Imagenes/actividades/escultura.jpg);
+    background-image: url(../imagenes/actividades/escultura.jpg);
     background-size: cover;
     border-radius: 5%;
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -485,7 +485,7 @@ div {
     transform: scale(1.3); 
 }
 .img5{
-    background-image: url(../Imagenes/actividades/dibujo.jpg);
+    background-image: url(../imagenes/actividades/dibujo.jpg);
     background-size: cover;
     border-radius: 5%;
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -624,7 +624,7 @@ div {
     flex-direction: column;
 }
 .titulos_mediosdepago {
-    background-image: url(../Imagenes/mediosdepago/titulomedios.jpeg);
+    background-image: url(../imagenes/mediosdepago/titulomedios.jpeg);
     width: 100%;
     height: 400px;
     background-size: cover;
