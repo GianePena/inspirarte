@@ -87,6 +87,28 @@ nav{
     grid-area:area3;
 }
 /*footer*/
+@media(max-width:720px){
+    #footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap:25px;
+        width: 100%;
+        height:650px;
+    }
+    .mendoza,
+    .cordoba{
+        text-align: center;
+    }
+    .logo_pie{
+        width: 200px;
+        height: 150px;
+        padding-left: 0px;
+        align-content: center;
+
+}
+}
 @media(max-width:480px){
     #footer{
         display: flex;
@@ -123,9 +145,12 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-/*imagen galeria*/
-
+.index{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
 .historia{
     background-image:url(../imagenes/index/muro-hormigon-gris.jpg);
     background-size: cover;
@@ -135,7 +160,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    margin-bottom: 75px;
 }
 .cuadro{
     width: 200px;
@@ -159,17 +183,16 @@ main {
 
 .historia_texto {
     background-color:#f5f5f5;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
     width: 90%;
     height: 120px;
     padding: 10px;
-    margin-bottom:  50px;
     font-size:1.35em;
     text-align: center;
     font-family:times new roman ;
     color:#757575;
     font-style: italic;
     word-spacing: 2px;
-    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .historia_texto span{
     font-weight: bold;
@@ -205,8 +228,32 @@ main {
     text-decoration: none;
     color: gray;
 }
+@media(max-width:720px){
+    .index{
+        gap:100px;
+    }
+    .historia{
+        height: 700px;
+    }
+    .historia_texto {
+        width: 600px;
+        height: 200px;
+    }
+    .historia_texto p {
+        font-size: 14px;
+        
+    }
+}
 
-
+@media(max-width:480px){
+    .historia{
+        width: 95%;
+        height: 1100px;
+    }
+    .historia_texto{
+        font-size: 16px;
+    }
+}
 /*-----------------------------usuario-------------------------------------*/
 
 /*Titulo*/
@@ -215,9 +262,10 @@ main {
     background-image: url(../imagenes/usuario/usuario.jpg);
     background-size: cover;
     opacity: 0.6;
-    width: 100%;
+    width: 95%;
     height: 400px;
-    margin-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 50px;
 }
 .titulo_usuario h1 {
     font-family: Arial, Helvetica, sans-serif;
@@ -228,18 +276,23 @@ main {
     text-decoration-style: cursive;
     padding-top: 100px;
 }
-
+.usuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 /*Foto usuario*/
 /*Formulario*/
 .cabecera_cuadro {
     font-family:'Courier New', Courier, monospace;
     font-size: 1.857em;
-    color: #536dfe;
+    color: #0e0d0d;
     text-align: center;
     margin-top: 5px;
     width: 100%;
     height: 50px;
-    background-color:rgb(198, 196, 196);
+    background-color: #9a53fe;
 }
 .formulario{
     font-size:1.25em;
@@ -268,7 +321,7 @@ main {
     margin-bottom: 2px;
 }
 
-div {
+.qr{
     width: 400px;
     height: 200px;
     border-radius: 5%;
@@ -330,29 +383,40 @@ div {
 }
 .registrarse h3{
     font-size: 1.5625em;
-    color:#536dfe;
+    color: #9a53fe;
     font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
 
 }
 
-.usuario{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+
 
 /*usuario*/
-
+@media(max-width:720px){
+    .titulo_usuario{
+        width: 95%;
+        margin-left: 25px;
+    }
+    .titulo_usuario h1{
+        font-size: 6.8em;
+    }
+    #usuario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .qr{
+        margin: 0%;
+        margin-top:100px;
+        
+    }
+}
 @media(max-width:480px){
     .titulo_usuario{
-        font-size: 0.52em;
-        width: 400px;
-        height: 200px;
-        background-size: cover;
-        margin-top: 75px;
-        margin-bottom: 50px;
-        padding-top:-50px;
+        font-size:14px;
+        width: 95%;
+        margin-left: 10px;
+        padding: auto;
     }
     .usuario{
         display: flex;
@@ -366,7 +430,7 @@ div {
     }
     .formulario{
         width: 100%;
-        height: 1100px;
+        height: 1150px;
         margin: 0%;
         display: flex;
         flex-direction: column;
@@ -377,22 +441,24 @@ div {
         height: 120px;
     }
     .qr{
-        height: 250px;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30px; 
+        height: 280px;
+        vertical-align: middle;
+        margin-left: 35px;
+        margin-top: 0%;
     }
     .qr img {
-        width: 150px;
-        height: 180px;
+        width: 180px;
+        height: 200px;
     }
     .registrarse{
         padding-top: 10px;
+        margin-top: 25px;
         width: 100%;
         height: 300px;
         justify-content: center;
     }
 }
+
 /*----------------------carreras--------------------------------------------*/
 /*Titulo*/
 .cuerpo_carreras{
@@ -400,12 +466,27 @@ div {
     flex-direction: column;
     justify-content: center;
 }
+
+.titulos_mediosdepago {
+    background-image: url(../imagenes/mediosdepago/titulomedios.jpeg);
+    background-size: cover;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
 .titulo_carrera{
-    background-image: url(../Imagenes/actividades/carrera.jpg);
+    background-image: url(../imagenes/actividades/carrera.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    opacity: 0.6;
+    width: 95%;
     height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+.titulo_carrera h1{
     font-family: Arial, Helvetica, sans-serif;
     color:#080808;
     font-size: 10em;
@@ -413,14 +494,12 @@ div {
     text-align: center;
     padding-top: 100px;
     text-transform: uppercase;
-    opacity: 0.6;
 }
-
 #carreras{
     display: grid;
     grid-template-columns: 300px 300px 400px 400px;
     grid-template-rows: 250px 250px;
-    margin-top:180px;
+    margin-top:100px;
     text-align: center;
     gap:15px;
     grid-template-areas: 
@@ -499,18 +578,40 @@ div {
     color: black;
 }
 /*carreras*/
-@media(max-width:480px){
-
-    .titulo_carrera{
-        width: 100%;
-        height: 150px;
-        font-size: 50px;
-        margin-top: 75px;
-        margin-bottom: 50px;
+@media(max-width:720px){
+    #carreras{
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 250px 250px 250px 250px 250px;
+        margin-top:100px;
+        text-align: center;
+        gap:15px;
+        grid-template-areas: 
+        "img1 img2"
+        "img1 img2 "
+        "img3 img4"
+        "img3 img4"
+        "img5 img5";
+    }
+    #carreras img {
+        background-size: cover;
     }
     .titulo_carrera{
-        text-align: center;
-        padding:50px;
+        width: 95%;
+        margin-left: 25px;
+    }
+    .titulo_carrera h1{
+        font-size: 6.5em;
+    }
+    
+}
+@media(max-width:480px){
+
+
+    .titulo_carrera{
+    margin-left:10px;
+    width: 95%;
+    font-size: 12px;
     }
     #carreras{
         display: flex;
@@ -531,21 +632,28 @@ div {
 /*-------------------------------+inf--------------------------------*/
 /*Titulo*/
 .titulo_inf{
+    background-image: url(../imagenes/documentos-organizacion-adultos-jovenes.jpg);
+    background-size: cover;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
-    margin-bottom: 50px;
 }
 .titulo_inf h1 {
-    font-size:7em;
-    color:#616161;
+    font-size:10em;
+    color:#0e0d0d;
     font-family: 'Tinos', serif;
     text-transform: uppercase;
 }
 .titulo_inf img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     opacity: 0.6;
 }
 /*Texto*/
@@ -598,10 +706,21 @@ div {
     box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 /*+inf*/
+@media(max-width:720px){
+    
+    .titulo_inf{
+        width: 95%;
+        margin-left: 25px;
+    }
+    .titulo_inf h1{
+        font-size: 7em;
+    }
+
+}
 @media(max-width:480px){
     .titulo_inf{
-        margin-top: 75px;
-        margin-bottom: 50px;
+    width: 95%;
+    margin-left: 10px;
     }
     .informacion{
         display: flex;
@@ -625,19 +744,24 @@ div {
 }
 .titulos_mediosdepago {
     background-image: url(../imagenes/mediosdepago/titulomedios.jpeg);
-    width: 100%;
-    height: 400px;
     background-size: cover;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+.titulos_mediosdepago h1{ 
     font-family: Arial, Helvetica, sans-serif;
     color:#080808;
     font-size: 10em;
     letter-spacing:1px;
-    opacity: 0.6;
-    z-index: 100;
     text-align: center;
     text-decoration: double;
     text-transform:uppercase ;
+    padding: 25px;
 }
+
 /*info-pagos*/
 .pagos_inf{
     width: 100%;
