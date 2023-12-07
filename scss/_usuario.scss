@@ -1,0 +1,238 @@
+@import"header";
+@import "footer";
+$font-titulos: 10em;
+$font-color: #080808;
+/*Titulo*/
+
+.titulo_usuario {
+    background-image: url(../imagenes/usuario/usuario.jpg);
+    background-size: cover;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: $font-color;
+        font-size: $font-titulos;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration-style: cursive;
+        padding-top: 100px;
+
+    }
+}
+
+
+.usuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .formulario {
+        font-size: 1.25em;
+        font-family: garamond;
+        color: #757575;
+        text-align: left;
+        width: 700px;
+        height: 1050px;
+        background-color: #f5f5f5;
+        margin-top: 50px;
+        padding: 25px 25px 25px 25px;
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+        border-radius: 5px;
+
+        .cabecera_cuadro {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.857em;
+            color: #0e0d0d;
+            text-align: center;
+            margin-top: 5px;
+            width: 100%;
+            height: 50px;
+            background-color: #9a53fe;
+        }
+
+        .caja_foto {
+            width: 220px;
+            height: 170px;
+            padding-bottom: 35px;
+
+            .foto_usuario {
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        .genero {
+            margin-bottom: 2px;
+        }
+
+    }
+
+
+}
+
+/*boton enviar*/
+.boton {
+    display: flex;
+    justify-content: center;
+
+    .boton_enviar_usuario {
+        font-size: 1em;
+        color: #f5f5f5;
+        background-color: #b8b7b7;
+        border: 1px solid whitesmoke;
+        text-align: center;
+        width: 122px;
+        height: 35px;
+    }
+
+}
+
+
+
+/*foto qr*/
+.qr {
+    width: 300px;
+    height: 320px;
+    background-color: #f5f5f5;
+    border-radius: 5%;
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+    margin-left: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    .qr_img {
+        width: 180px;
+        height: 180px;
+        padding-bottom: 20px;
+
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 0.875em;
+        font-family: garamond;
+        text-align: center;
+
+    }
+}
+
+/*Informacion sobre el registro*/
+
+.registrarse {
+    font-family: calibri;
+    font-size: 1.125em;
+    text-align: center;
+    color: #757575;
+    width: 1000px;
+    height: 220px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: inset 0 -3em 3em rgba(110, 110, 110, 0.2),
+        0 0 0 2px rgb(245, 245, 245),
+        0.3em 0.3em 1em rgba(110, 110, 110, 0.2);
+    margin-top: 100px;
+    margin-bottom: 70px;
+
+    h3 {
+        font-size: 1.5625em;
+        color: #9a53fe;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+
+    }
+
+}
+
+/*---------------------USAURIO RESPONSIVE-------------------------------------*/
+/*ARREGALR-----------------------------------
+-----------------------*/
+
+@media(max-width:720px) {
+
+    .titulo_usuario {
+        width: 95%;
+        margin-left: 25px;
+
+        h1 {
+            font-size: 6.8em;
+        }
+
+    }
+
+
+    .usuario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .qr {
+        margin: 0%;
+        margin-top: 100px;
+
+    }
+}
+
+@media(max-width:480px) {
+    .titulo_usuario {
+        font-size: 14px;
+        width: 95%;
+        margin-left: 10px;
+        padding: auto;
+    }
+
+    .usuario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0%;
+        gap: 15px;
+    }
+
+    .cabecera_cuadro {
+        height: 100px;
+    }
+
+    .formulario {
+        width: 100%;
+        height: 1150px;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .foto_usuario img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .qr {
+        height: 280px;
+        vertical-align: middle;
+        margin-left: 35px;
+        margin-top: 0%;
+    }
+
+    .qr img {
+        width: 180px;
+        height: 200px;
+    }
+
+    .registrarse {
+        padding-top: 10px;
+        margin-top: 25px;
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+    }
+}

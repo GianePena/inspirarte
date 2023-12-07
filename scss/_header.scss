@@ -1,0 +1,20 @@
+/*HEADER*/
+
+#header {
+    z-index: 100;
+
+    .header_cuadro {
+        background-image: url(../imagenes/cuadro.jpg);
+        background-repeat: no-repeat;
+        height: 150px;
+        background-size: cover;
+    }
+
+}
+
+@media(max-width:480px) {
+    .logo_inspirArte {
+        width: 220px;
+        height: 180px;
+    }
+}

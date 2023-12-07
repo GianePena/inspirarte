@@ -1,0 +1,168 @@
+.titulo_carrera {
+    background-image: url(../imagenes/actividades/carrera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #080808;
+        font-size: 10em;
+        letter-spacing: 1px;
+        text-align: center;
+        padding-top: 100px;
+        text-transform: uppercase;
+    }
+}
+
+#carreras {
+    display: grid;
+    grid-template-columns: 300px 300px 400px 400px;
+    grid-template-rows: 250px 250px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    grid-template-areas:
+        "img1 img2 img3 img4"
+        "img1 img2 img5 img5";
+
+    .img1 {
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        grid-area: img1;
+        background-image: url(../imagenes/actividades/pintura.jpg);
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+    }
+
+    .img2 {
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        grid-area: img2;
+        background-image: url(../imagenes/actividades/ceramica.jpg);
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+
+
+    }
+
+    .img3 {
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        grid-area: img3;
+        background-image: url(../imagenes/actividades/artesania.jpg);
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+
+    }
+
+    .img4 {
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        grid-area: img4;
+        background-image: url(../imagenes/actividades/escultura.jpg);
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+
+    }
+
+    .img5 {
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        grid-area: img5;
+        background-image: url(../imagenes/actividades/dibujo.jpg);
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+
+
+    }
+
+    p {
+        font-size: 3.75em;
+        font-family: 'Oswald', sans-serif;
+        color: black;
+    }
+
+}
+
+
+
+
+/*carreras*/
+@media(max-width:720px) {
+    #carreras {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 250px 250px 250px 250px 250px;
+        margin-top: 100px;
+        text-align: center;
+        gap: 15px;
+        grid-template-areas:
+            "img1 img2"
+            "img1 img2 "
+            "img3 img4"
+            "img3 img4"
+            "img5 img5";
+    }
+
+    #carreras img {
+        background-size: cover;
+    }
+
+    .titulo_carrera {
+        width: 95%;
+        margin-left: 25px;
+    }
+
+    .titulo_carrera h1 {
+        font-size: 6.5em;
+    }
+
+}
+
+@media(max-width:480px) {
+
+
+    .titulo_carrera {
+        margin-left: 10px;
+        width: 95%;
+        font-size: 12px;
+    }
+
+    #carreras {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5 {
+        width: 350px;
+        height: 150px;
+    }
+}

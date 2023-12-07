@@ -1,0 +1,196 @@
+@import"header";
+
+.titulos_mediosdepago {
+    background-image: url(../imagenes/mediosdepago/titulomedios.jpeg);
+    background-size: cover;
+    opacity: 0.6;
+    width: 95%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 50px;
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #080808;
+        font-size: 10em;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: double;
+        text-transform: uppercase;
+        padding: 25px;
+    }
+
+}
+
+/*consulta sobre pagos*/
+.pagos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pagos_inf {
+        font-size: 1.25em;
+        font-family: garamond;
+        text-align: center;
+        width: 80%;
+        height: 500px;
+        margin-top: 100px;
+        padding: 25px 25px 25px 25px;
+        background-color: #f5f5f5;
+        border-radius: 2%;
+        box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210, 210, 210), 17px 17px rgb(190, 190, 190);
+
+        .medios_pago {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+
+            .pagofacil,
+            .rapipago,
+            .banco {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+        }
+    }
+
+    .contenedor_pagos {
+        display: grid;
+        margin-top: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 250px;
+        gap: 100px;
+        grid-template-areas:
+            "comprobante descarga";
+
+        .comprobante {
+            grid-area: comprobante;
+            width: 550px;
+            height: 200px;
+            background-color: #f5f5f5;
+            border-top: 15px solid #9a53fe;
+            font-family: 'Tinos', serif;
+            font-size: 1.5625em;
+            text-align: center;
+            padding-top: 25px;
+            box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+
+            .subir_comprobante {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .descarga_chequera {
+        grid-area: descarga;
+        width: 550px;
+        height: 200px;
+        background-color: #f5f5f5;
+        font-family: 'Tinos', serif;
+        font-size: 1.5625em;
+        text-align: center;
+        padding-top: 25px;
+        border-top: 15px solid #9a53fe;
+        box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+
+        a {
+            color: black;
+            font-size: 15px;
+        }
+    }
+
+    .consulta {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        width: 70%;
+        height: 350px;
+        background-color: #f5f5f5;
+        border-top: 15px solid #9a53fe;
+        padding-top: 35px;
+        align-items: center;
+        margin-top: 100px;
+        box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+
+        h4 {
+            text-align: center;
+            font-family: 'Tinos', serif;
+            padding-top: 70px;
+            font-size: 25px;
+        }
+
+        textarea {
+            width: 95%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 1em;
+            resize: none;
+            align-items: center;
+        }
+
+        .boton_enviar {
+            display: flex;
+            justify-content: center;
+            font-size: 1em;
+            color: #f5f5f5;
+            text-decoration: double;
+            background-color: #b8b7b7;
+            border: 1px solid whitesmoke;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            margin: 25px 25px 25px 25px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .pagos_inf {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+    }
+
+    .medios_pago {
+        margin: 0%;
+        width: 300px;
+    }
+
+    .medios_pago img {
+        width: 100px;
+        height: 100px;
+        padding: 0%;
+    }
+
+    .contenedor_pagos {
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .comprobante {
+        width: 350px;
+        height: 150px;
+    }
+
+    .descarga_chequera {
+        width: 350px;
+        height: 150px;
+    }
+
+    .consulta {
+        width: 380px;
+        height: 400px;
+        margin: 0%;
+    }
+}
