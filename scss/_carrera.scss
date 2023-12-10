@@ -1,21 +1,26 @@
+@import "variables";
+
 .titulo_carrera {
     background-image: url(../imagenes/actividades/carrera.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     opacity: 0.6;
     width: 95%;
     height: 400px;
     margin-top: 80px;
     margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
     h1 {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #080808;
-        font-size: 10em;
+        font-family: $titulos;
+        color: $color_titulo;
+        font-size: $font-size-titulo;
         letter-spacing: 1px;
-        text-align: center;
-        padding-top: 100px;
         text-transform: uppercase;
+        text-decoration: double;
+        padding: 25px;
     }
 }
 
@@ -41,7 +46,7 @@
         background-image: url(../imagenes/actividades/pintura.jpg);
         background-size: cover;
         border-radius: 5%;
-        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
     }
 
     .img2 {
@@ -53,7 +58,7 @@
         background-image: url(../imagenes/actividades/ceramica.jpg);
         background-size: cover;
         border-radius: 5%;
-        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 
 
     }
@@ -67,8 +72,7 @@
         background-image: url(../imagenes/actividades/artesania.jpg);
         background-size: cover;
         border-radius: 5%;
-        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
-
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
     }
 
     .img4 {
@@ -80,8 +84,7 @@
         background-image: url(../imagenes/actividades/escultura.jpg);
         background-size: cover;
         border-radius: 5%;
-        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
-
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
     }
 
     .img5 {
@@ -93,7 +96,7 @@
         background-image: url(../imagenes/actividades/dibujo.jpg);
         background-size: cover;
         border-radius: 5%;
-        box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 
 
     }
@@ -107,10 +110,23 @@
 }
 
 
-
+/*----------------------------------------------------------DISEÑO RESPONSIVE-------------------------------------------------------*/
 
 /*carreras*/
 @media(max-width:720px) {
+    .titulo_carrera {
+        width: 100%;
+        height: 200px;
+        margin: 0%;
+        margin-top: 100px;
+        display: flex;
+
+        h1 {
+            font-size: 7em;
+            text-align: center;
+        }
+    }
+
     #carreras {
         display: grid;
         grid-template-columns: 300px 300px;
@@ -124,21 +140,13 @@
             "img3 img4"
             "img3 img4"
             "img5 img5";
-    }
 
-    #carreras img {
-        background-size: cover;
-    }
+        img {
+            background-size: cover;
+        }
 
-    .titulo_carrera {
-        width: 95%;
-        margin-left: 25px;
-    }
 
-    .titulo_carrera h1 {
-        font-size: 6.5em;
     }
-
 }
 
 @media(max-width:480px) {
@@ -146,23 +154,30 @@
 
     .titulo_carrera {
         margin-left: 10px;
-        width: 95%;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
         font-size: 12px;
     }
 
     #carreras {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: auto;
-        gap: 20px;
+        gap: 30px;
+        margin: 50px;
+
+        .img1,
+        .img2,
+        .img3,
+        .img4,
+        .img5 {
+            width: 350px;
+            height: 150px;
+            background-size: cover;
+        }
     }
 
-    .img1,
-    .img2,
-    .img3,
-    .img4,
-    .img5 {
-        width: 350px;
-        height: 150px;
-    }
 }

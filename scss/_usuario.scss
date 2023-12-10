@@ -1,8 +1,6 @@
-@import"header";
-@import "footer";
-$font-titulos: 10em;
-$font-color: #080808;
-/*Titulo*/
+@import"variables";
+
+/*----------------------------TITULO PAGINA USUARIO----------------------------------*/
 
 .titulo_usuario {
     background-image: url(../imagenes/usuario/usuario.jpg);
@@ -12,20 +10,36 @@ $font-color: #080808;
     height: 400px;
     margin-top: 80px;
     margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
     h1 {
-        font-family: Arial, Helvetica, sans-serif;
-        color: $font-color;
-        font-size: $font-titulos;
+        font-family: $titulos;
+        color: $color_titulo;
+        font-size: $font-size-titulo;
         letter-spacing: 1px;
-        text-align: center;
-        text-decoration-style: cursive;
-        padding-top: 100px;
+        text-transform: uppercase;
+        text-decoration: double;
+        padding: 25px;
+    }
+
+    @media(max-width:720px) {
+
+        width: 100%;
+        margin: 0%;
+
+        h1 {
+            font-size: 6.8em;
+        }
 
     }
+
 }
 
 
+/*-------------------------------MAIN----------------------------------------------*/
 .usuario {
     display: flex;
     flex-direction: row;
@@ -34,72 +48,70 @@ $font-color: #080808;
 
     .formulario {
         font-size: 1.25em;
-        font-family: garamond;
+        font-family: $titulos;
         color: #757575;
         text-align: left;
         width: 700px;
-        height: 1050px;
-        background-color: #f5f5f5;
+        height: 1100px;
+        background-color: $color-fondo-cajas;
         margin-top: 50px;
         padding: 25px 25px 25px 25px;
-        box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+        box-shadow: $sombreado-cajas;
         border-radius: 5px;
+    }
 
-        .cabecera_cuadro {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.857em;
-            color: #0e0d0d;
-            text-align: center;
-            margin-top: 5px;
-            width: 100%;
-            height: 50px;
-            background-color: #9a53fe;
+    .cabecera_cuadro {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.857em;
+        color: #0e0d0d;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        height: 100x;
+        background-color: $color-alternatio;
+    }
+
+    .caja_foto {
+        width: 220px;
+        height: 170px;
+        padding-bottom: 35px;
+
+        .foto_usuario {
+            height: 150px;
+            width: 150px;
         }
+    }
 
-        .caja_foto {
-            width: 220px;
-            height: 170px;
-            padding-bottom: 35px;
+    .genero {
+        margin-bottom: 2px;
+    }
 
-            .foto_usuario {
-                height: 150px;
-                width: 150px;
+    .boton {
+        display: flex;
+        justify-content: center;
+
+        .boton_enviar_usuario {
+            font-size: 1em;
+            color: #f5f5f5;
+            background-color: #b8b7b7;
+            border: 1px solid whitesmoke;
+            text-align: center;
+            width: 122px;
+            height: 35px;
+
+            &:hover {
+                transform: scale(1.1);
             }
         }
 
-        .genero {
-            margin-bottom: 2px;
-        }
-
-    }
-
-
-}
-
-/*boton enviar*/
-.boton {
-    display: flex;
-    justify-content: center;
-
-    .boton_enviar_usuario {
-        font-size: 1em;
-        color: #f5f5f5;
-        background-color: #b8b7b7;
-        border: 1px solid whitesmoke;
-        text-align: center;
-        width: 122px;
-        height: 35px;
     }
 
 }
 
-
-
-/*foto qr*/
 .qr {
     width: 300px;
     height: 320px;
-    background-color: #f5f5f5;
+    background-color: $color-fondo-cajas;
     border-radius: 5%;
     box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
     margin-left: 75px;
@@ -125,8 +137,6 @@ $font-color: #080808;
     }
 }
 
-/*Informacion sobre el registro*/
-
 .registrarse {
     font-family: calibri;
     font-size: 1.125em;
@@ -134,105 +144,128 @@ $font-color: #080808;
     color: #757575;
     width: 1000px;
     height: 220px;
-    background-color: #f5f5f5;
+    padding: 15px;
+    background-color: $color-fondo-cajas;
     border-radius: 10px;
-    box-shadow: inset 0 -3em 3em rgba(110, 110, 110, 0.2),
-        0 0 0 2px rgb(245, 245, 245),
-        0.3em 0.3em 1em rgba(110, 110, 110, 0.2);
+    box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+    ;
     margin-top: 100px;
     margin-bottom: 70px;
 
     h3 {
         font-size: 1.5625em;
-        color: #9a53fe;
-        font-family: 'Courier New', Courier, monospace;
+        color: $color-alternatio;
+        font-family: $titulos;
         font-weight: bold;
 
     }
 
 }
 
+
+
+
+
+
+
+
 /*---------------------USAURIO RESPONSIVE-------------------------------------*/
-/*ARREGALR-----------------------------------
------------------------*/
 
 @media(max-width:720px) {
 
-    .titulo_usuario {
-        width: 95%;
-        margin-left: 25px;
 
-        h1 {
-            font-size: 6.8em;
+    .titulo_usuario {
+        width: 100%;
+        height: 200px;
+        margin: 0%;
+        margin-top: 100px;
+    }
+
+
+    .usuario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+
+        .formulario {
+            width: 80%;
+        }
+
+        .qr {
+            margin: 0%;
+            margin-top: 100px;
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+
+        .registrarse {
+            width: 70%;
+            height: 220px;
+            padding: 10px;
         }
 
     }
 
-
-    .usuario {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .qr {
-        margin: 0%;
-        margin-top: 100px;
-
-    }
 }
 
 @media(max-width:480px) {
     .titulo_usuario {
+        margin-top: 100px;
         font-size: 14px;
-        width: 95%;
+        width: 100%;
+        height: 200px;
         margin-left: 10px;
         padding: auto;
+        display: flex;
+        justify-content: center;
     }
 
     .usuario {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-content: center;
         margin: 0%;
         gap: 15px;
-    }
 
-    .cabecera_cuadro {
-        height: 100px;
-    }
+        .formulario {
+            width: 80%;
+            height: 1150px;
+            margin: 0%;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    .formulario {
-        width: 100%;
-        height: 1150px;
-        margin: 0%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+            .cabecera_cuadro {
+                height: 100px;
+            }
 
-    .foto_usuario img {
-        width: 120px;
-        height: 120px;
-    }
+            .foto_usuario img {
+                width: 120px;
+                height: 120px;
+            }
+        }
 
-    .qr {
-        height: 280px;
-        vertical-align: middle;
-        margin-left: 35px;
-        margin-top: 0%;
-    }
+        .qr {
+            height: 250px;
+            width: 60%;
 
-    .qr img {
-        width: 180px;
-        height: 200px;
-    }
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
 
-    .registrarse {
-        padding-top: 10px;
-        margin-top: 25px;
-        width: 100%;
-        height: 300px;
-        justify-content: center;
+        .registrarse {
+            width: 70%;
+            height: 300px;
+        }
+
     }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------INDEX----------------------------------------*/
 .index {
   display: flex;
@@ -11,7 +12,7 @@
 .historia {
   background-image: url(../imagenes/index/muro-hormigon-gris.jpg);
   background-size: cover;
-  height: 350px;
+  height: 430px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -40,13 +41,11 @@
   background-color: #f5f5f5;
   overflow: hidden;
   box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
-  width: 90%;
-  height: 120px;
-  padding: 10px;
-  font-size: 1.35em;
+  padding: 30px;
+  font-size: 25px;
   text-align: center;
   font-family: times new roman;
-  color: #757575;
+  color: gray;
   font-style: italic;
   word-spacing: 2px;
 }
@@ -68,7 +67,7 @@
 .datos .datos_profesores {
   width: 350px;
   height: 350px;
-  border: 8px solid #ad77f9;
+  border: 8px solid #9a53fe;
   box-shadow: 4px 3px 3px 4px #d1d0d0;
   border-radius: 100%;
   display: flex;
@@ -85,6 +84,12 @@
   height: 180px;
   opacity: 50%;
 }
+.datos .datos_alumnos img:hover,
+.datos .datos_calendario img:hover,
+.datos .datos_materias img:hover,
+.datos .datos_profesores img:hover {
+  transform: translate(0px, -20px);
+}
 .datos p {
   font-size: 25px;
   font-family: calibri;
@@ -93,6 +98,13 @@
   opacity: 0.6;
 }
 
+@media (max-width: 1600px) {
+  .datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 @media (max-width: 720px) {
   .index {
     gap: 100px;
@@ -102,122 +114,21 @@
   }
   .index .historia .historia_texto {
     width: 600px;
-    height: 200px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 1600px) {
-  .datos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 300px;
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
   .historia {
     width: 95%;
-    height: 1100px;
+    height: 1250px;
   }
-  .historia .historia_texto {
-    font-size: 16px;
+  .datos {
+    margin-top: 300px;
   }
 }
 /*--------------------------- USUARIOS---------------------------------------*/
-/*HEADER*/
-#header {
-  z-index: 100;
-}
-#header .header_cuadro {
-  background-image: url(../imagenes/cuadro.jpg);
-  background-repeat: no-repeat;
-  height: 150px;
-  background-size: cover;
-}
-
-@media (max-width: 480px) {
-  .logo_inspirArte {
-    width: 220px;
-    height: 180px;
-  }
-}
-#footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #bbbaba;
-  height: 200px;
-}
-#footer .columna_sede_mendoza {
-  margin-top: 22px;
-}
-#footer .columna_sede_mendoza .titulo_sede {
-  margin-top: 20px;
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  font-size: 1.2em;
-  font-family: garamond;
-  font-weight: bold;
-  color: whitesmoke;
-}
-#footer .columna_sede_mendoza a {
-  text-decoration: none;
-  color: whitesmoke;
-  font-family: garamond;
-  font-size: 1em;
-}
-#footer .columna_sede_mendoza p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: whitesmoke;
-  font-size: 1em;
-}
-#footer .columna_sede_cordoba .titulo_sede {
-  margin-top: 20px;
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  font-size: 1.2em;
-  font-family: garamond;
-  font-weight: bold;
-  color: whitesmoke;
-}
-#footer .columna_sede_cordoba a {
-  text-decoration: none;
-  color: whitesmoke;
-  font-family: garamond;
-  font-size: 1em;
-}
-#footer .columna_sede_cordoba p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: whitesmoke;
-  font-size: 1em;
-}
-#footer .columna_redes img {
-  width: 50px;
-  height: 50px;
-}
-#footer .columna_redes li {
-  list-style: none;
-  display: inline-block;
-}
-
-@media (max-width: 820px) {
-  #footer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-    width: 100%;
-    height: 400px;
-  }
-  #footer .columna_sede_cordoba {
-    margin-top: -40px;
-  }
-}
-/*Titulo*/
+/*----------------------------TITULO PAGINA USUARIO----------------------------------*/
 .titulo_usuario {
   background-image: url(../imagenes/usuario/usuario.jpg);
   background-size: cover;
@@ -226,17 +137,30 @@
   height: 400px;
   margin-top: 80px;
   margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .titulo_usuario h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: #080808;
-  font-size: 10em;
+  font-size: 9em;
   letter-spacing: 1px;
-  text-align: center;
-  text-decoration-style: cursive;
-  padding-top: 100px;
+  text-transform: uppercase;
+  text-decoration: double;
+  padding: 25px;
+}
+@media (max-width: 720px) {
+  .titulo_usuario {
+    width: 100%;
+    margin: 0%;
+  }
+  .titulo_usuario h1 {
+    font-size: 6.8em;
+  }
 }
 
+/*-------------------------------MAIN----------------------------------------------*/
 .usuario {
   display: flex;
   flex-direction: row;
@@ -245,46 +169,44 @@
 }
 .usuario .formulario {
   font-size: 1.25em;
-  font-family: garamond;
+  font-family: Arial, Helvetica, sans-serif;
   color: #757575;
   text-align: left;
   width: 700px;
-  height: 1050px;
+  height: 1100px;
   background-color: #f5f5f5;
   margin-top: 50px;
   padding: 25px 25px 25px 25px;
-  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
+  box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210, 210, 210), 17px 17px rgb(190, 190, 190);
   border-radius: 5px;
 }
-.usuario .formulario .cabecera_cuadro {
+.usuario .cabecera_cuadro {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.857em;
   color: #0e0d0d;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 30px;
   width: 100%;
-  height: 50px;
+  height: 100x;
   background-color: #9a53fe;
 }
-.usuario .formulario .caja_foto {
+.usuario .caja_foto {
   width: 220px;
   height: 170px;
   padding-bottom: 35px;
 }
-.usuario .formulario .caja_foto .foto_usuario {
+.usuario .caja_foto .foto_usuario {
   height: 150px;
   width: 150px;
 }
-.usuario .formulario .genero {
+.usuario .genero {
   margin-bottom: 2px;
 }
-
-/*boton enviar*/
-.boton {
+.usuario .boton {
   display: flex;
   justify-content: center;
 }
-.boton .boton_enviar_usuario {
+.usuario .boton .boton_enviar_usuario {
   font-size: 1em;
   color: #f5f5f5;
   background-color: #b8b7b7;
@@ -293,8 +215,10 @@
   width: 122px;
   height: 35px;
 }
+.usuario .boton .boton_enviar_usuario:hover {
+  transform: scale(1.1);
+}
 
-/*foto qr*/
 .qr {
   width: 300px;
   height: 320px;
@@ -320,7 +244,6 @@
   text-align: center;
 }
 
-/*Informacion sobre el registro*/
 .registrarse {
   font-family: calibri;
   font-size: 1.125em;
@@ -328,106 +251,120 @@
   color: #757575;
   width: 1000px;
   height: 220px;
+  padding: 15px;
   background-color: #f5f5f5;
   border-radius: 10px;
-  box-shadow: inset 0 -3em 3em rgba(110, 110, 110, 0.2), 0 0 0 2px rgb(245, 245, 245), 0.3em 0.3em 1em rgba(110, 110, 110, 0.2);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
   margin-top: 100px;
   margin-bottom: 70px;
 }
 .registrarse h3 {
   font-size: 1.5625em;
   color: #9a53fe;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 /*---------------------USAURIO RESPONSIVE-------------------------------------*/
-/*ARREGALR-----------------------------------
------------------------*/
 @media (max-width: 720px) {
   .titulo_usuario {
-    width: 95%;
-    margin-left: 25px;
-  }
-  .titulo_usuario h1 {
-    font-size: 6.8em;
+    width: 100%;
+    height: 200px;
+    margin: 0%;
+    margin-top: 100px;
   }
   .usuario {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 0%;
   }
-  .qr {
+  .usuario .formulario {
+    width: 80%;
+  }
+  .usuario .qr {
     margin: 0%;
     margin-top: 100px;
+  }
+  .usuario .qr img {
+    width: 150px;
+    height: 150px;
+  }
+  .usuario .registrarse {
+    width: 70%;
+    height: 220px;
+    padding: 10px;
   }
 }
 @media (max-width: 480px) {
   .titulo_usuario {
+    margin-top: 100px;
     font-size: 14px;
-    width: 95%;
+    width: 100%;
+    height: 200px;
     margin-left: 10px;
     padding: auto;
+    display: flex;
+    justify-content: center;
   }
   .usuario {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
     margin: 0%;
     gap: 15px;
   }
-  .cabecera_cuadro {
-    height: 100px;
-  }
-  .formulario {
-    width: 100%;
+  .usuario .formulario {
+    width: 80%;
     height: 1150px;
     margin: 0%;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .foto_usuario img {
+  .usuario .formulario .cabecera_cuadro {
+    height: 100px;
+  }
+  .usuario .formulario .foto_usuario img {
     width: 120px;
     height: 120px;
   }
-  .qr {
-    height: 280px;
-    vertical-align: middle;
-    margin-left: 35px;
-    margin-top: 0%;
+  .usuario .qr {
+    height: 250px;
+    width: 60%;
   }
-  .qr img {
-    width: 180px;
-    height: 200px;
+  .usuario .qr img {
+    width: 120px;
+    height: 120px;
   }
-  .registrarse {
-    padding-top: 10px;
-    margin-top: 25px;
-    width: 100%;
+  .usuario .registrarse {
+    width: 70%;
     height: 300px;
-    justify-content: center;
   }
 }
 /*---------------------------CARRERAS----------------------------------------*/
 .titulo_carrera {
   background-image: url(../imagenes/actividades/carrera.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   opacity: 0.6;
   width: 95%;
   height: 400px;
   margin-top: 80px;
   margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .titulo_carrera h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: #080808;
-  font-size: 10em;
+  font-size: 9em;
   letter-spacing: 1px;
-  text-align: center;
-  padding-top: 100px;
   text-transform: uppercase;
+  text-decoration: double;
+  padding: 25px;
 }
 
 #carreras {
@@ -446,7 +383,7 @@
   background-image: url(../imagenes/actividades/pintura.jpg);
   background-size: cover;
   border-radius: 5%;
-  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 #carreras .img1:hover {
   transform: scale(1.3);
@@ -456,7 +393,7 @@
   background-image: url(../imagenes/actividades/ceramica.jpg);
   background-size: cover;
   border-radius: 5%;
-  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 #carreras .img2:hover {
   transform: scale(1.3);
@@ -466,7 +403,7 @@
   background-image: url(../imagenes/actividades/artesania.jpg);
   background-size: cover;
   border-radius: 5%;
-  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 #carreras .img3:hover {
   transform: scale(1.3);
@@ -476,7 +413,7 @@
   background-image: url(../imagenes/actividades/escultura.jpg);
   background-size: cover;
   border-radius: 5%;
-  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 #carreras .img4:hover {
   transform: scale(1.3);
@@ -486,7 +423,7 @@
   background-image: url(../imagenes/actividades/dibujo.jpg);
   background-size: cover;
   border-radius: 5%;
-  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 #carreras .img5:hover {
   transform: scale(1.3);
@@ -497,8 +434,20 @@
   color: black;
 }
 
+/*----------------------------------------------------------DISEÑO RESPONSIVE-------------------------------------------------------*/
 /*carreras*/
 @media (max-width: 720px) {
+  .titulo_carrera {
+    width: 100%;
+    height: 200px;
+    margin: 0%;
+    margin-top: 100px;
+    display: flex;
+  }
+  .titulo_carrera h1 {
+    font-size: 7em;
+    text-align: center;
+  }
   #carreras {
     display: grid;
     grid-template-columns: 300px 300px;
@@ -511,33 +460,32 @@
   #carreras img {
     background-size: cover;
   }
-  .titulo_carrera {
-    width: 95%;
-    margin-left: 25px;
-  }
-  .titulo_carrera h1 {
-    font-size: 6.5em;
-  }
 }
 @media (max-width: 480px) {
   .titulo_carrera {
     margin-left: 10px;
-    width: 95%;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
     font-size: 12px;
   }
   #carreras {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: auto;
-    gap: 20px;
+    gap: 30px;
+    margin: 50px;
   }
-  .img1,
-  .img2,
-  .img3,
-  .img4,
-  .img5 {
+  #carreras .img1,
+  #carreras .img2,
+  #carreras .img3,
+  #carreras .img4,
+  #carreras .img5 {
     width: 350px;
     height: 150px;
+    background-size: cover;
   }
 }
 /*----------------------------+INF-------------------------------------------*/
@@ -556,9 +504,11 @@
   gap: 15px;
 }
 .titulo_inf h1 {
-  font-size: 10em;
-  color: #0e0d0d;
-  font-family: "Tinos", serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #080808;
+  font-size: 9em;
+  letter-spacing: 1px;
+  text-align: center;
   text-transform: uppercase;
 }
 .titulo_inf img {
@@ -570,6 +520,8 @@
 .informacion {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
   color: #757575;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -579,12 +531,14 @@
 .informacion .egresado p,
 .informacion .turnos p {
   padding-left: 25px;
+  font-family: calibri;
+  font-size: 18px;
 }
 .informacion .preinscripcion details,
 .informacion .horarios details,
 .informacion .egresado details,
 .informacion .turnos details {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background-color: #f5f5f5;
   border-left-style: solid;
@@ -594,15 +548,17 @@
   box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
   border-radius: 5px;
   overflow: hidden;
+  font-family: calibri;
+  padding: 15px;
 }
 .informacion .preinscripcion summary,
 .informacion .horarios summary,
 .informacion .egresado summary,
 .informacion .turnos summary {
   padding: 1rem;
+  font-size: 18px;
   display: block;
   background: #f5f5f5;
-  padding-left: 2.2rem;
   position: relative;
   cursor: pointer;
 }
@@ -612,8 +568,9 @@
 .informacion .turnos summary:before {
   content: "";
   border-width: 0.4rem;
+  font-family: calibri;
   border-style: solid;
-  border-color: transparent transparent transparent grey;
+  border-color: transparent transparent transparent;
   position: absolute;
   top: 1.3rem;
   left: 1rem;
@@ -644,11 +601,17 @@
 /*+inf*/
 @media (max-width: 720px) {
   .titulo_inf {
-    width: 95%;
-    margin-left: 25px;
+    width: 100%;
+    height: 200px;
+    margin: 0%;
+    margin-top: 100px;
   }
   .titulo_inf h1 {
     font-size: 7em;
+  }
+  .titulo_inf img {
+    width: 100px;
+    height: 100px;
   }
 }
 @media (max-width: 480px) {
@@ -656,38 +619,8 @@
     width: 95%;
     margin-left: 10px;
   }
-  .informacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  .preinscripcion {
-    height: 500px;
-  }
-  .egresado {
-    height: 400px;
-  }
 }
 /*-------------------------MEDIOS DE PAGO------------------------------------*/
-/*HEADER*/
-#header {
-  z-index: 100;
-}
-#header .header_cuadro {
-  background-image: url(../imagenes/cuadro.jpg);
-  background-repeat: no-repeat;
-  height: 150px;
-  background-size: cover;
-}
-
-@media (max-width: 480px) {
-  .logo_inspirArte {
-    width: 220px;
-    height: 180px;
-  }
-}
 .titulos_mediosdepago {
   background-image: url(../imagenes/mediosdepago/titulomedios.jpeg);
   background-size: cover;
@@ -696,15 +629,17 @@
   height: 400px;
   margin-top: 80px;
   margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .titulos_mediosdepago h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: #080808;
-  font-size: 10em;
+  font-size: 9em;
   letter-spacing: 1px;
-  text-align: center;
-  text-decoration: double;
   text-transform: uppercase;
+  text-decoration: double;
   padding: 25px;
 }
 
@@ -719,12 +654,12 @@
   font-family: garamond;
   text-align: center;
   width: 80%;
-  height: 500px;
+  height: 400px;
   margin-top: 100px;
-  padding: 25px 25px 25px 25px;
+  padding: 70px 25px 25px 25px;
   background-color: #f5f5f5;
   border-radius: 2%;
-  box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210, 210, 210), 17px 17px rgb(190, 190, 190);
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .pagos .pagos_inf .medios_pago {
   display: flex;
@@ -735,20 +670,19 @@
 .pagos .pagos_inf .medios_pago .pagofacil,
 .pagos .pagos_inf .medios_pago .rapipago,
 .pagos .pagos_inf .medios_pago .banco {
-  padding-left: 80px;
-  padding-right: 80px;
+  width: 100px;
+  height: 100px;
 }
 .pagos .contenedor_pagos {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
   margin-top: 100px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 250px;
-  gap: 100px;
-  grid-template-areas: "comprobante descarga";
 }
 .pagos .contenedor_pagos .comprobante {
-  grid-area: comprobante;
-  width: 550px;
+  width: 450px;
   height: 200px;
   background-color: #f5f5f5;
   border-top: 15px solid #9a53fe;
@@ -756,14 +690,13 @@
   font-size: 1.5625em;
   text-align: center;
   padding-top: 25px;
-  box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+  box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210, 210, 210), 17px 17px rgb(190, 190, 190);
 }
 .pagos .contenedor_pagos .comprobante .subir_comprobante {
   font-size: 15px;
 }
-.pagos .descarga_chequera {
-  grid-area: descarga;
-  width: 550px;
+.pagos .contenedor_pagos .descarga_chequera {
+  width: 450px;
   height: 200px;
   background-color: #f5f5f5;
   font-family: "Tinos", serif;
@@ -771,42 +704,42 @@
   text-align: center;
   padding-top: 25px;
   border-top: 15px solid #9a53fe;
-  box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+  box-shadow: 6px 6px rgb(227, 227, 227), 13px 13px rgb(210, 210, 210), 17px 17px rgb(190, 190, 190);
 }
-.pagos .descarga_chequera a {
+.pagos .contenedor_pagos .descarga_chequera a {
   color: black;
   font-size: 15px;
 }
 .pagos .consulta {
-  justify-content: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
-  width: 70%;
-  height: 350px;
+  justify-content: center;
+  width: 90%;
+  height: 400px;
   background-color: #f5f5f5;
   border-top: 15px solid #9a53fe;
-  padding-top: 35px;
-  align-items: center;
+  padding-top: 40px;
   margin-top: 100px;
-  box-shadow: inset 1px 1px 5px 0 rgba(20, 20, 20, 0.2);
+  margin-bottom: 100px;
+  box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
 }
 .pagos .consulta h4 {
   text-align: center;
   font-family: "Tinos", serif;
-  padding-top: 70px;
+  padding-top: 50px;
   font-size: 25px;
 }
-.pagos .consulta textarea {
+.pagos .consulta .consulta_espacio {
   width: 95%;
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: #f5f5f5;
   font-size: 1em;
   resize: none;
+  margin-left: 30px;
   align-items: center;
 }
 .pagos .consulta .boton_enviar {
@@ -820,44 +753,54 @@
   text-align: center;
   width: 150px;
   height: 50px;
-  margin: 25px 25px 25px 25px;
+  margin: 0px 25px 25px 25px;
+}
+.pagos .consulta .boton_enviar:hover {
+  transform: scale(1.1);
 }
 
-@media (max-width: 480px) {
-  .pagos_inf {
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-  .medios_pago {
+/*----------------------------------------------------DISEÑO RESPONSIVE-------------------------*/
+@media (max-width: 780px) {
+  .titulos_mediosdepago {
+    width: 100%;
+    height: 250px;
     margin: 0%;
-    width: 300px;
+    margin-top: 100px;
   }
-  .medios_pago img {
-    width: 100px;
-    height: 100px;
-    padding: 0%;
+  .titulos_mediosdepago h1 {
+    font-size: 5.6em;
+    text-align: center;
   }
-  .contenedor_pagos {
-    height: 380px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 25px;
+  .pagos .pagos_inf {
+    padding: 10px;
   }
-  .comprobante {
-    width: 350px;
-    height: 150px;
+  .pagos .consulta {
+    margin-top: 100px;
   }
-  .descarga_chequera {
-    width: 350px;
-    height: 150px;
+  .pagos .consulta h4 {
+    margin-top: 20px;
   }
+  .pagos .consulta .consulta_espacio {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
   .consulta {
-    width: 380px;
-    height: 400px;
-    margin: 0%;
+    width: 90%;
+    height: 500px;
+    margin-top: 50px;
+    padding-top: 20px;
+  }
+  .consulta h4 {
+    font-size: 20px;
+  }
+  .consulta textarea {
+    height: 80px;
+    font-size: 0.9em;
+  }
+  .consulta .boton_enviar {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 /*--------------------------FOOTER-------------------------------------------*/
@@ -936,6 +879,23 @@
   }
   #footer .columna_sede_cordoba {
     margin-top: -40px;
+  }
+}
+/*HEADER*/
+#header {
+  z-index: 100;
+}
+#header .header_cuadro {
+  background-image: url(../imagenes/cuadro.jpg);
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  .logo_inspirArte {
+    width: 220px;
+    height: 180px;
   }
 }
 

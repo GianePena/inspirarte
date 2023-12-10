@@ -1,3 +1,5 @@
+@import "variables";
+
 .index {
     display: flex;
     justify-content: center;
@@ -10,7 +12,7 @@
 .historia {
     background-image: url(../imagenes/index/muro-hormigon-gris.jpg);
     background-size: cover;
-    height: 350px;
+    height: 430px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,7 +22,7 @@
     .cuadro {
         width: 200px;
         height: 100px;
-        background-color: #9a53fe;
+        background-color: $color-alternatio;
         border-radius: 10px;
         margin: 25px;
         text-align: center;
@@ -38,18 +40,17 @@
     }
 
     .historia_texto {
-        background-color: #f5f5f5;
+        background-color: $color-fondo-cajas;
         overflow: hidden;
         box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
-        width: 90%;
-        height: 120px;
-        padding: 10px;
-        font-size: 1.35em;
+        padding: 30px;
+        font-size: 25px;
         text-align: center;
         font-family: times new roman;
-        color: #757575;
+        color: $color-letra;
         font-style: italic;
         word-spacing: 2px;
+
     }
 
     .historia_texto_span {
@@ -73,7 +74,7 @@
     .datos_profesores {
         width: 350px;
         height: 350px;
-        border: 8px solid #ad77f9;
+        border: 8px solid $color-alternatio;
         box-shadow: 4px 3px 3px 4px #d1d0d0;
         border-radius: 100%;
         display: flex;
@@ -87,20 +88,30 @@
             height: 180px;
             opacity: 50%;
 
-
+            &:hover {
+                transform: translate(0px, -20px);
+            }
         }
     }
 
     p {
         font-size: 25px;
-        font-family: calibri;
+        font-family: $font-letra-texto;
         text-decoration: none;
-        color: gray;
+        color: $color-letra;
         opacity: 0.6;
     }
 
 }
 
+
+@media(max-width:1600px) {
+    .datos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 @media(max-width:720px) {
     .index {
@@ -111,28 +122,20 @@
 
             .historia_texto {
                 width: 600px;
-                height: 200px;
-                font-size: 14px;
+                height: 300px;
+                font-size: 18px;
             }
         }
-    }
-}
-
-@media(max-width:1600px) {
-    .datos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 }
 
 @media(max-width:480px) {
     .historia {
         width: 95%;
-        height: 1100px;
+        height: 1250px;
+    }
 
-        .historia_texto {
-            font-size: 16px;
-        }
+    .datos {
+        margin-top: 300px
     }
 }

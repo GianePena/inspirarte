@@ -13,9 +13,11 @@
     gap: 15px;
 
     h1 {
-        font-size: 10em;
-        color: #0e0d0d;
-        font-family: 'Tinos', serif;
+        font-family: $titulos;
+        color: $color_titulo;
+        font-size: $font-size-titulo;
+        letter-spacing: 1px;
+        text-align: center;
         text-transform: uppercase;
     }
 
@@ -30,6 +32,8 @@
 .informacion {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
     color: #757575;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -40,26 +44,30 @@
     .turnos {
         p {
             padding-left: 25px;
+            font-family: $font-letra-texto;
+            font-size: 18px;
         }
 
         details {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
-            background-color: #f5f5f5;
+            background-color: $color-fondo-cajas;
             border-left-style: solid;
             border-width: 15px;
-            border-left-color: #9a53fe;
+            border-left-color: $color-alternatio;
             margin-bottom: .5rem;
             box-shadow: inset 1px 1px 4px 0 rgba(20, 20, 20, 0.2);
             border-radius: 5px;
             overflow: hidden;
+            font-family: $font-letra-texto;
+            padding: 15px;
         }
 
         summary {
             padding: 1rem;
+            font-size: 18px;
             display: block;
-            background: #f5f5f5;
-            padding-left: 2.2rem;
+            background: $color-fondo-cajas;
             position: relative;
             cursor: pointer;
         }
@@ -67,14 +75,16 @@
         summary:before {
             content: '';
             border-width: .4rem;
+            font-family: $font-letra-texto;
             border-style: solid;
-            border-color: transparent transparent transparent grey;
+            border-color: transparent transparent transparent;
             position: absolute;
             top: 1.3rem;
             left: 1rem;
             transform: rotate(0);
             transform-origin: .2rem 50%;
             transition: .25s transform ease;
+
         }
 
         details[open]>summary:before {
@@ -105,35 +115,27 @@
 @media(max-width:720px) {
 
     .titulo_inf {
-        width: 95%;
-        margin-left: 25px;
-    }
+        width: 100%;
+        height: 200px;
+        margin: 0%;
+        margin-top: 100px;
 
-    .titulo_inf h1 {
-        font-size: 7em;
-    }
 
+
+        h1 {
+            font-size: 7em;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 @media(max-width:480px) {
     .titulo_inf {
         width: 95%;
         margin-left: 10px;
-    }
-
-    .informacion {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .preinscripcion {
-        height: 500px;
-    }
-
-    .egresado {
-        height: 400px;
     }
 }
