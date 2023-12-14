@@ -859,13 +859,9 @@
   color: whitesmoke;
   font-size: 1em;
 }
-#footer .columna_redes img {
+#footer .columna_redes a img {
   width: 50px;
   height: 50px;
-}
-#footer .columna_redes li {
-  list-style: none;
-  display: inline-block;
 }
 
 @media (max-width: 820px) {
@@ -890,6 +886,9 @@
   background-repeat: no-repeat;
   height: 150px;
   background-size: cover;
+}
+#header a:hover {
+  text-decoration: underline 2px black;
 }
 
 @media (max-width: 480px) {
